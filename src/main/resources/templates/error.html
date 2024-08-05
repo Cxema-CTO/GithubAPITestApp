@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{includes/head :: head}"></head>
+
+
+<body>
+
+<div class="modal-center bg-color-yellow box-shadow-yellow">
+    <div class="in-center-center">
+        <h3 th:text="${error}">some text</h3>
+        <h4 th:text="${info}">some text</h4>
+        <button class="blue-button margin-left" th:form="backButton" type="submit">Back</button>
+    </div>
+    <form th:id="backButton" th:method="GET" th:action="@{/}"></form>
+</div>
+
+</body>
+
+</html>

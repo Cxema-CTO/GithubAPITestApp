@@ -1,0 +1,10 @@
+2024-08-04 22:25:40 INFO  ApiController:29 - Get request for find the repositories of the user - jaygajera17
+2024-08-04 22:25:40 INFO  GithubServiceImplementation:34 - Url for GET request - https://api.github.com/users/jaygajera17/repos?type=owner&sort=full_name
+2024-08-04 22:35:20 INFO  MainController:46 - Find the repositories of the user - jaygajera17
+2024-08-04 22:35:20 INFO  GithubServiceImplementation:34 - Url for GET request - https://api.github.com/users/jaygajera17/repos?type=owner&sort=full_name
+2024-08-04 22:35:21 ERROR MainController:55 - Can't find repositories for user "jaygajera17"
+2024-08-04 22:35:21 ERROR MainController:56 - Receive answer from github - org.springframework.web.client.HttpClientErrorException$Forbidden: 403 rate limit exceeded: "{"message":"API rate limit exceeded for 83.9.79.213. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}<EOL>"
+2024-08-04 22:35:37 INFO  MainController:46 - Find the repositories of the user - jaygajera17
+2024-08-04 22:35:37 INFO  GithubServiceImplementation:34 - Url for GET request - https://api.github.com/users/jaygajera17/repos?type=owner&sort=full_name
+2024-08-04 22:35:37 ERROR MainController:55 - Can't find repositories for user "jaygajera17"
+2024-08-04 22:35:37 ERROR MainController:56 - Receive answer from github - org.springframework.web.client.HttpClientErrorException$Forbidden: 403 rate limit exceeded: "{"message":"API rate limit exceeded for 83.9.79.213. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"}<EOL>"

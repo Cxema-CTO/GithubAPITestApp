@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{includes/head :: head}"></head>
+
+
+<body>
+
+
+<div class="container">
+    <h3>Result for </h3>
+    <h3 class="margin-left" th:text="${userName}">some text</h3>
+    <button class="blue-button margin-left" th:form="backButton" type="submit">Back</button>
+</div>
+<form th:id="backButton" th:method="GET" th:action="@{/}"></form>
+
+<div class="container">
+    <table>
+        <th>Repository name</th>
+        <th>Branches</th>
+        <tr class="tr-repo" th:each="repo: ${repositories}" th:id="|link-id-${repo.repositoryName}|">
+            <td th:text="${repo.repositoryName}"></td>
+            <td>
+                <table>
+                    <tr th:each="branch: ${repo.branches}">
+
+                        <td th:text="${branch.name}"></td>
+                        <td th:text="${branch.lastCommitSha}"></td>
+                </table>
+        </tr>
+        </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+<!--for test-->
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{includes/head :: head}"></head>
+
+<body>
+
+
+<div class="modal-center bg-color-white">
+    <div class="in-center-center">
+        <h3 class="h3-modal-save">Input username</h3>
+
+        <form th:id="form-find" th:method="POST" th:action="@{/}">
+            <input class="input-login" type="text" th:value="${userName}" th:placeholder="username" th:name="userName" maxlength="128" required/>
+        </form>
+        <button th:form="form-find" class="blue-button" type="submit" th:onclick="showModalLoading()">Find</button>
+    </div>
+</div>
+
+<div th:replace="~{includes/modals/modal_loading :: modal_loading}"></div>
+
+
+</body>
+</html>
